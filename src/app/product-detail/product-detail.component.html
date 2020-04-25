@@ -1,0 +1,14 @@
+<div *ngIf="!product">No Such Product !!!</div>
+<div *ngIf="product">
+
+	<h1>Product Detail</h1>
+
+	<ul>
+		<li>{{ product.name }}</li>
+		<li>{{ product.price | currency }}</li>
+		<li *ngIf="product.description" >{{ product.description }}</li>
+	</ul>
+  <p>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </p>
+</div>
